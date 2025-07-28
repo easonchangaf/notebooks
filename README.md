@@ -65,6 +65,25 @@ Once you've installed the dependencies, you can activate the `conda` environment
 $ conda activate book # or conda activate book-chapter7
 $ jupyter notebook
 ```
+## install step by step
+
+```sh
+# 1. 先创建基础环境
+conda create -n book python=3.9 -y
+
+# 2. 激活环境
+conda activate book
+
+# 3. 安装conda包
+conda install cudatoolkit=11.3 pytorch-scatter notebook ipykernel ipywidgets git-lfs libsndfile -c pytorch -c conda-forge -y
+
+pip install --upgrade pip setuptools wheel 
+
+pip install setuptools_scm
+
+# 4. 安装pip包
+pip install -r requirements.txt
+```
 
 ## FAQ
 
